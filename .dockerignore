@@ -1,0 +1,8 @@
+
+.git
+.otto*
+.vagrant
+node_modules/
+npm-debug.log
+.env
+!empty

@@ -1,0 +1,7 @@
+#!/usr/bin/env sh
+
+# cd into our directory
+cd /opt/simpleflake
+
+# start our node.js application
+exec node index.js;
