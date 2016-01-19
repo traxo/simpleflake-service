@@ -31,7 +31,7 @@ app     = express();
 
 // Simpleflake
 flake   = require('simpleflake');
-epoch   = Date.UTC(2015, 0, 1);
+epoch   = Date.UTC(2016, 0, 1);
 
 // Configuration
 app.set('port', process.env.PORT || 3000);
