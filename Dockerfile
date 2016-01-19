@@ -11,15 +11,14 @@
 # Known Issues:
 #   1) gliderlabs/alpine:3.2 and nodejs latest:
 #      https://bugs.alpinelinux.org/issues/4999
-#   2) smebberson/alpine-nodejs:
-#      runtime error: process.dlopen
+#      Marked as fixed targeting Alpine 3.3.2
+#   2) TODO: Install s6 process manager
 #
 
-# FROM smebberson/alpine-nodejs
-FROM gliderlabs/alpine:3.2
+FROM gliderlabs/alpine:3.3
 
 # The app uses native npm modules, so extra tools are required.
-RUN apk add --update make gcc g++ python nodejs
+RUN apk --no-cache add make gcc g++ python nodejs
 
 # Cache package.json and node_modules to speed up builds
 ADD package.json package.json
@@ -39,7 +38,7 @@ npm install
 
 # Remove build tools for the native modules
 RUN apk del make gcc g++ python && \
-  rm -rf /tmp/* /var/cache/apk/* /root/.npm /root/.node-gyp
+  rm -rf /tmp/* /root/.npm /root/.node-gyp
 
 # Environment variables
 ENV PORT 3000
