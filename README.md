@@ -37,7 +37,7 @@ Configuration should be done via process environment variables.
 
 ##### Epoch
 
-This implementation uses a default epoch of 2015-01-01 and is not yet configurable via environment variable.
+This implementation uses a default epoch of 2016-01-01 and is not yet configurable via environment variable.
 
 ##### Port
 
