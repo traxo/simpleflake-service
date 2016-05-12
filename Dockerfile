@@ -10,17 +10,14 @@
 #   docker run -P -d --env-file .env traxo/simpleflake
 #
 # Known Issues:
-#   1) gliderlabs/alpine:3.2 and nodejs latest:
-#      https://bugs.alpinelinux.org/issues/4999
-#      Marked as fixed targeting Alpine 3.3.2
-#   2) TODO: Install s6 process manager
-#   3) TODO: Review possible issues with Alpine DNS related
+#   1) TODO: Install s6 process manager
+#   2) TODO: Review possible issues with Alpine DNS related
 #      to typical service discovery operations:
 #      http://gliderlabs.viewdocs.io/docker-alpine/caveats/
 #      https://github.com/janeczku/go-dnsmasq
 #
 
-FROM gliderlabs/alpine:3.3
+FROM alpine:3.3
 MAINTAINER Traxo
 
 # The app uses native npm modules, so extra tools are required.
