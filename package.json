@@ -9,6 +9,6 @@
   },
   "dependencies": {
     "express": "^4.9.7",
-    "simpleflake": "~1.0.0"
+    "simpleflake": "~2.0.0"
   }
 }
